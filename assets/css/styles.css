@@ -1,0 +1,114 @@
+body {
+    background-color: white;
+	font-size: 18px;
+	
+}
+
+.navbar-default {
+	background-color: white;
+	color: grey;
+	margin: 0px;
+	padding: 20px;
+	border-radius: 0px;
+	border-bottom: 1px solid #969696;
+}
+
+a {
+	color: grey;
+	margin-right: 15px;
+	
+}
+
+a:hover {
+	color: #FE4B0A;
+	text-decoration: none;
+}
+
+.right {
+	float: right;
+}
+
+hr {
+	border-bottom: 1px solid #EAEAEA;
+}
+
+
+#centerlogin {
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  margin-top: 40px;
+}
+
+.container-fluid {
+	padding: 20px;
+}
+
+h1 {
+	font-weight: 200;
+	font-size: 2.5em;
+}
+
+.button {
+ color: #FE4B0A;
+ border: 2px solid;
+ text-decoration: none;
+ padding: 8px;
+ background-color: white;
+}
+
+.button:hover {
+ color: white;
+ background-color: #FE4B0A;
+}
+
+/* Colors */
+
+.red {
+  color: #FE4B0A;
+}
+
+
+
+#gmail {
+	margin-right: 15px;
+}
+
+
+#bigsmile {
+	font-size: 8em;
+	color: #FE4B0A;
+}
+
+.header-image{
+	position: relative;
+}
+
+.weather{
+	top:250px;
+    position: absolute;
+	text-align: center;
+	margin-left: auto;
+	margin-right: auto;
+	left: 0;
+	right: 0;
+	color: white;
+}
+.container-fluid {
+	padding: 20px;
+}
+
+.italic {
+	font-style: italic;
+}
+
+.messages {
+	margin-bottom: 5px;
+}
+
+.joinus {
+	margin-bottom: 20px;
+}
+
+
+

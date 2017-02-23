@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block title %}Delete Message{% endblock title %}
+
+{% block content%}
+{% block content_login %}
+
+<div class="container-fluid">
+    <p>Are you sure about this?</p>
+    <form action="/message/{{ message.key.id() }}/delete" method="post">
+        <button type="submit" class="button">Delete</button>
+</div>
+
+{% endblock content_login%}
+{% endblock content%}

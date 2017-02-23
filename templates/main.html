@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+
+{% block title %}Main Page{% endblock title %}
+
+{% block content %}
+
+
+{% if logged_in %}
+    {% block content_login%}
+    <div class="container-fluid">
+    <h4>Logged in as: {{ user.nickname() }}!</h4>
+    <h3>Send a message to a friend.</h3>
+
+    <form method="post">
+    <p><input name="receiver" placeholder="Name of friend" required></p>
+    <p><input name="subject" placeholder="subject"></p>
+    <p><textarea name="text" rows="5" cols="40" placeholder="Your Message"></textarea></p>
+    <button type="submit" class="button">Send</button>
+    </form>
+    </div>
+
+    {% endblock content_login%}
+
+
+    {% else %}
+		<div id="centerlogin">
+            <h1>Welcome to BMail. One account. All of Boogle.</h1>
+            <p class="joinus">Hey anonymous you! Please join us and login.</p>
+            <a href="{{ login_url }}" class="button">
+            	Login
+            </a>
+            <div id="bigsmile"> B-)
+            </div>
+        </div>
+
+
+
+{% endif %}
+
+{% endblock content %}
+
+
+
+
+
+

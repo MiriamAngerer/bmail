@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+
+{% block title %}
+Sent Messages
+{% endblock title %}
+
+{% block content%}
+
+{% block content_login%}
+<div class="container-fluid">
+
+    <h2>
+        Sent Messages
+    </h2>
+    <p>Logged in as: {{ user.nickname() }}!</p>
+
+    <div>
+    {% for message in messages %}
+        <p class="messages">{{message.created.strftime("%d.%m.%Y, %H:%M")}}: <span class="italic">{{message.subject}}</span>
+            <br/>
+            <strong>to {{message.receiver}}</strong>
+        <p>{{message.text}}</p>
+        <a href="/message/{{ message.key.id() }}/delete">Delete</a>
+        <hr>
+    {% endfor %}
+    </div>
+
+{%if not messages %}
+ <p> You have no messages yet.</p>
+
+{% endif %}
+
+</div>
+
+{% endblock content_login%}
+{% endblock content%}
+
+
