@@ -6,25 +6,41 @@
 
 
 {% if logged_in %}
-    {% block content_login%}
-    
-    <div class="container-fluid">
-    	<h4>Logged in as: {{ user.nickname() }}</h4>
-        <h3>Send a message to a friend.</h3>
 
-        <form method="post">
-            <p><input name="receiver" placeholder="Name of friend" required></p>
-            <p><input name="subject" placeholder="subject"></p>
-            <p><textarea name="text" rows="5" placeholder="Your Message"></textarea></p>
-            <button type="submit" class="button">Send</button>
-        </form>
+
+	<div class="container-fluid">
+    	<div class="row">
+        
+        	<div class="col-md-3">
+                <p><a href="/">Send a Message</a></p>
+                <p><a href="/inbox">Inbox</a></p>
+                <p><a href="/sent_messages">Sent Messages</a></p>
+            </div>
+            
+            <div class="col-md-9">
+         
+                <h4>Logged in as: {{ user.nickname() }}</h4>
+            	<h3>Send a message to a friend.</h3>
+            	<form method="post">
+                    <p><input name="receiver" placeholder="Name of friend" required></p>
+                    <p><input name="subject" placeholder="subject"></p>
+                    <p><textarea name="text" rows="5" placeholder="Your Message"></textarea></p>
+                    <button type="submit" class="button">Send</button>
+            	</form>
+        
+         	</div>
+            
+         </div>
     </div>
+    
+    	
 
-    {% endblock content_login%}
+
 
 
     {% else %}
     
+    	<div class="container-fluid">
 		<div id="centerlogin">
             <h1>Welcome to BMail. One account. All of Boogle.</h1>
             <p class="joinus">Hey anonymous you! Please join us and login.</p>
@@ -34,6 +50,7 @@
             <div id="bigsmile"> 
             	B-)
             </div>
+        </div>
         </div>
 
 

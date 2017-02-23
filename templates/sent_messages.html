@@ -1,4 +1,4 @@
-{% extends "base.html" %}
+{% extends "main.html" %}
 
 {% block title %}
 Sent Messages
@@ -6,33 +6,45 @@ Sent Messages
 
 {% block content%}
 
-{% block content_login%}
+
 <div class="container-fluid">
+    	<div class="row">
+        
+        	<div class="col-md-3">
+                <p><a href="/">Send a Message</a></p>
+                <p><a href="/inbox">Inbox</a></p>
+                <p><a href="/sent_messages">Sent Messages</a></p>
+            </div>
+            
+            <div class="col-md-9">
+         
+            <h2> Sent Messages
+            </h2>
+    		<p>Logged in as: {{ user.nickname() }}
+            </p>
 
-    <h2>
-        Sent Messages
-    </h2>
-    <p>Logged in as: {{ user.nickname() }}!</p>
-
-    {% for message in messages %}
-        <p class="messages">{{message.created.strftime("%d.%m.%Y, %H:%M")}}: <span class="italic">{{message.subject}}</span>
-            <br/>
-            <strong>to {{message.receiver}}</strong>
-         </p>
-        <p>{{message.text}}</p>
-        <a href="/message/{{ message.key.id() }}/delete">Delete</a>
-        <hr>
-    {% endfor %}
+    		{% for message in messages %}
+            <p class="messages">{{message.created.strftime("%d.%m.%Y, %H:%M")}}: <span class="italic">{{message.subject}}</span>
+                <br/>
+                <strong>to {{message.receiver}}</strong>
+            </p>
+            <p>{{message.text}}</p>
+            <a href="/message/{{ message.key.id() }}/delete">Delete</a>
+            <hr>
+    		{% endfor %}
 
 
-{%if not messages %}
- <p> You have no messages yet.</p>
+            {%if not messages %}
+             <p> You have no messages yet.</p>
+            
+            {% endif %}
+            
+        
+         	</div>
+            
+         </div>
+    </div>
 
-{% endif %}
-
-</div>
-
-{% endblock content_login%}
 {% endblock content%}
 
 
