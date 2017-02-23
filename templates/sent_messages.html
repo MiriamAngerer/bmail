@@ -17,11 +17,9 @@ Sent Messages
             </div>
             
             <div class="col-md-9">
-         
-            <h2> Sent Messages
-            </h2>
-    		<p>Logged in as: {{ user.nickname() }}
-            </p>
+         	
+            <h2> Sent Messages</h2>
+    		
 
     		{% for message in messages %}
             <p class="messages">{{message.created.strftime("%d.%m.%Y, %H:%M")}}: <span class="italic">{{message.subject}}</span>

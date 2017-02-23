@@ -68,6 +68,9 @@ h1 {
   color: #FE4B0A;
 }
 
+.grey {
+	color: #969696;
+}
 
 
 .bmail {
@@ -122,5 +125,8 @@ textarea {
     border: 1px solid #969696;
 }
 
+.loggedin {
+	margin-right: 15px;
+}
 
 

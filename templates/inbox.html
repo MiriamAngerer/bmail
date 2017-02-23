@@ -17,10 +17,9 @@ Inbox
             </div>
             
             <div class="col-md-9">
-         
+         	
             <h2> Inbox </h2>
-            <p>Logged in as: {{ user.nickname() }}!</p>
-        
+           
             {% for message in messages %}
                 <p class="messages">{{message.created.strftime("%d.%m.%Y, %H:%M")}}: <span class="italic">{{message.subject}}</span>
                     <br/>
