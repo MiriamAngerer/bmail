@@ -83,7 +83,7 @@ class MessageDeleteHandler(BaseHandler):
 
     def post(self, message_id):
         message = Message.get_by_id(int(message_id))
-        message.put()
+        message.key.delete()
         return self.redirect_to("sent_messages")
 
 
