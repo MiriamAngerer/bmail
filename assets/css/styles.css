@@ -110,5 +110,17 @@ h1 {
 	margin-bottom: 20px;
 }
 
+input {
+    padding: 5px;
+    width: 400px;
+    border: 1px solid #969696;
+}
+
+textarea {
+    padding: 5px;
+    width: 400px;
+    border: 1px solid #969696;
+}
+
 
 
