@@ -15,30 +15,27 @@
 </head>
 <body>
 {% if logged_in %}
-    <nav class="navbar navbar-default">
-
-        <span id="gmail" class="red">Bmail</span>
-       <a href="/">Send a Message</a>
+	<nav class="navbar navbar-default">
+    	<span id="gmail" class="red">Bmail</span>
+        <a href="/">Send a Message</a>
         <a href="/inbox">Inbox</a>
         <a href="/sent_messages">Sent Messages</a>
         <a href="/weather">Bmail Weather</a>
         <a href="{{ logout_url }}" class="right">Logout</a>
     </nav>
+    
     {% else %}
     <nav class="navbar navbar-default">
-       <a href="/" class="red">Bmail</a>
+    	<a href="/" class="red">Bmail</a>
         <a href="/about">About</a>
         <a href="https://www.google.com">Help</a>
         <a href="/weather">Bmail Weather</a>
     </nav>
+    
 {% endif %}
-
-
 
 {% block content %}
 {% endblock content %}
-
-
 
 </body>
 </html>
